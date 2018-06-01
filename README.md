@@ -1,8 +1,12 @@
 # AWS-S3-clone-on-optane
-Minio clone on Optane
+Minio clone on Optane device
 
-## Install Docker. Make sure to install on the Storage device under consideration, not on boot drive, if evaluating storage performance. 
+## Install Docker 
+https://www.docker.com/
+Install Docker on the Storage device under consideration, not on boot drive, if evaluating storage performance. By default, container
+storage is mapped to drive where docker is installed.
 For memory performance, should not matter which volume / disk docker is installed on.
+Reference: https://linuxconfig.org/how-to-move-docker-s-default-var-lib-docker-to-another-directory-on-ubuntu-debian-linux
 ```
 sudo apt-get update --assume-yes
 sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
@@ -13,6 +17,7 @@ sudo apt-get update --assume-yes
 sudo apt-get install docker-ce --assume-yes
 ```
 ## Install minio server
+https://github.com/minio/minio
 ```
 docker pull minio/minio
 docker run -p 9001:9000 minio/minio server /data
@@ -24,6 +29,7 @@ Minio server will provide key/secret, copy for use in aws-cli
 #Reference implementation http://tryoptane.intel.com:9001
 
 ## Install aws-cli
+https://aws.amazon.com/cli/
 ```
 apt‑get install python‑pip  --assume-yes
 pip install awscli
@@ -42,3 +48,9 @@ aws configure
 aws ‑‑endpoint‑url http://localhost:9001 s3 mb s3://mybucket2 
 aws --endpoint-url http://localhost:9001 s3 cp _YPTuniqid_5af645ed7e1a69.83853291_SD.mp4 s3://mybucket2
 ```
+
+## Running benchmarks
+Example benchmark
+https://github.com/intel-cloud/cosbench
+
+# Constrain memory/ storage available to Minio as required for benchmarking purposes
