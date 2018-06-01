@@ -27,7 +27,8 @@ Docker will save data in container folder /data. This will be automatically dele
 Minio server will provide key/secret, copy for use in aws-cli
 
 #Gui available @ http://localhost:9001
-#Reference implementation http://tryoptane.intel.com:9001
+
+# Reference implementation http://tryoptane.intel.com:9001
 
 ## Install aws-cli
 https://aws.amazon.com/cli/
