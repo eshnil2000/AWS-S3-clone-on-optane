@@ -54,4 +54,4 @@ aws --endpoint-url http://localhost:9001 s3 cp _YPTuniqid_5af645ed7e1a69.8385329
 Example benchmark
 https://github.com/intel-cloud/cosbench
 
-# Constrain memory/ storage available to Minio as required for benchmarking purposes
+Constrain memory/ storage available to Minio as required for benchmarking purposes
