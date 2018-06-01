@@ -1,4 +1,4 @@
-# AWS-S3-clone-on-Optane
+## AWS-S3-clone-on-Optane
 Minio clone on Optane device
 
 ## Install Docker 
@@ -28,7 +28,7 @@ Minio server will provide key/secret, copy for use in aws-cli
 
 #Gui available @ http://localhost:9001
 
-# Reference implementation http://tryoptane.intel.com:9001
+## Reference implementation http://tryoptane.intel.com:9001
 
 ## Install aws-cli
 https://aws.amazon.com/cli/
