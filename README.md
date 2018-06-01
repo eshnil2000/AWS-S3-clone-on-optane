@@ -3,6 +3,7 @@ Minio clone on Optane device
 
 ## Install Docker 
 https://www.docker.com/
+Why Docker? Easy install, auto clean on container exit. Storage device can be exposed as filesystem with close to native performance by mapping volume if required.
 Install Docker on the Storage device under consideration, not on boot drive, if evaluating storage performance. By default, container
 storage is mapped to drive where docker is installed.
 For memory performance, should not matter which volume / disk docker is installed on.
