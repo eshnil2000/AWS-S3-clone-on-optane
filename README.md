@@ -17,11 +17,11 @@ sudo apt-get install docker-ce --assume-yes
 docker pull minio/minio
 docker run -p 9001:9000 minio/minio server /data
 ```
-# Docker will save data in container folder /data. This will be automatically deleted upon container exit
-# Minio server will provide key/secret, copy for use in aws-cli
+Docker will save data in container folder /data. This will be automatically deleted upon container exit
+Minio server will provide key/secret, copy for use in aws-cli
 
-## Gui available @ http://localhost:9001
-## Reference implementation http://tryoptane.intel.com:9001
+#Gui available @ http://localhost:9001
+#Reference implementation http://tryoptane.intel.com:9001
 
 ## Install aws-cli
 ```
@@ -39,6 +39,6 @@ aws configure
 
 ## Create buckets, populate with files via aws-cli
 ```
-aws ‑‑endpoint‑url http://tryoptane.intel.com:9001 s3 mb s3://mybucket2 
-aws --endpoint-url http://tryoptane.intel.com:9001 s3 cp _YPTuniqid_5af645ed7e1a69.83853291_SD.mp4 s3://mybucket2
+aws ‑‑endpoint‑url http://localhost:9001 s3 mb s3://mybucket2 
+aws --endpoint-url http://localhost:9001 s3 cp _YPTuniqid_5af645ed7e1a69.83853291_SD.mp4 s3://mybucket2
 ```
