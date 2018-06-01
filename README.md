@@ -46,13 +46,15 @@ aws configure
 #leave all other fields blank
 
 ## Create buckets, populate with files via aws-cli
+aws-cli & these commands can be run from any device, does not need to be on the same Minio server. The same exact commands can be run
+against Amazon AWS instance, aws-cli is compatible.
 ```
 aws ‑‑endpoint‑url http://localhost:9001 s3 mb s3://mybucket2 
 aws --endpoint-url http://localhost:9001 s3 cp _YPTuniqid_5af645ed7e1a69.83853291_SD.mp4 s3://mybucket2
 ```
 
 ## Running benchmarks
-Example benchmark
+Example benchmark. Benchmark can be run from any device.
 https://github.com/intel-cloud/cosbench
 
 Constrain memory/ storage available to Minio as required for benchmarking purposes
