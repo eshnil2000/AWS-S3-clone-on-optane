@@ -1,4 +1,4 @@
-# AWS-S3-clone-on-optane
+# AWS-S3-clone-on-Optane
 Minio clone on Optane device
 
 ## Install Docker 
