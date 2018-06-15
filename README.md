@@ -47,8 +47,19 @@ aws configure
 aws-cli & these commands can be run from any device, does not need to be on the same Minio server. The same exact commands can be run
 against Amazon AWS instance, aws-cli is compatible.
 ```
+//Create a bucket
 aws ‑‑endpoint‑url http://localhost:9001 s3 mb s3://mybucket2 
+//upload file to bucket
 aws --endpoint-url http://localhost:9001 s3 cp _YPTuniqid_5af645ed7e1a69.83853291_SD.mp4 s3://mybucket2
+//list all buckets
+aws --endpoint-url http://localhost:9001 s3 ls 
+//delete object
+aws --endpoint-url http://localhost:9001 s3 rm s3://mybucket2/_YPTuniqid_5af645ed7e1a69.83853291_SD.mp4
+//list objects in a bucket
+aws --endpoint-url http://localhost:9001 s3 ls s3://mybucket2
+
+
+
 ```
 
 ## Running benchmarks
