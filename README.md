@@ -65,5 +65,7 @@ aws --endpoint-url http://localhost:9001 s3 ls s3://mybucket2
 ## Running benchmarks
 Example benchmark. Benchmark can be run from any device.
 https://github.com/intel-cloud/cosbench
-
 Constrain memory/ storage available to Minio as required for benchmarking purposes
+
+## For a quick test, simple benchmark script is available in this repo, see file:
+s3perf.sh
