@@ -23,6 +23,17 @@ https://github.com/minio/minio
 docker pull minio/minio
 docker run -p 9001:9000 minio/minio server /data
 ```
+
+## Install minio server on ramdisk
+```
+//Create ramdisk
+mkdir -p /media/ramdisk
+//mount ramdisk
+mount -t tmpfs -o size=2048M tmpfs /media/ramdisk
+//attach ramdisk as Docker volume
+docker run -p 9002:9000 -v /media/ramdisk:/data minio/minio server /data
+```
+
 Docker will save data in container folder /data. This will be automatically deleted upon container exit
 Minio server will provide key/secret, copy for use in aws-cli
 
