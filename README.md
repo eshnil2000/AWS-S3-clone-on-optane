@@ -70,4 +70,7 @@ Constrain memory/ storage available to Minio as required for benchmarking purpos
 ## For a quick test, simple benchmark script is available in this repo, see file:
 s3perf.sh
 
+## example command, which creates a bucket named nilesh-test and uses that for the benchmarks
+./s3perf.sh -b nilesh-test
+
 script adapted from https://github.com/christianbaun/ossperf/blob/master/ossperf.sh
