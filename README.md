@@ -97,4 +97,6 @@ DOWNLOAD:Assuming there's a local folder called t2 where files are to be copied 
 ```
 aws --endpoint-url http://169.63.88.188:9001 s3 ls s3://mybucket2 | awk '{print $4}' |parallel "aws --endpoint-url http://169.63.88.188:9001 s3 cp  s3://mybucket2/{} t2"
 ```
+## to explicitly limit memory, use Cgroups
+https://www.cloudsigma.com/howto-cgroups/
 
