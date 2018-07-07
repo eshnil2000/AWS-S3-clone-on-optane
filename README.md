@@ -85,3 +85,14 @@ s3perf.sh
 ./s3perf.sh -b nilesh-test
 
 script adapted from https://github.com/christianbaun/ossperf/blob/master/ossperf.sh
+
+## Using the GNU parallel tool to download/upload in parallel
+UPLOAD: Assuming there's a local folder called testfiles with files to be copied to s3:
+```
+ls testfiles/* | parallel -j5 "aws --endpoint-url http://169.63.88.188:9001 s3 cp {} s3://mybucket2"
+```
+DOWNLOAD:Assuming there's a local folder called t2 where files are to be copied from s3:
+```
+aws --endpoint-url http://169.63.88.188:9001 s3 ls s3://mybucket2 | awk '{print $4}' |parallel -j5 "aws --endpoint-url http://169.63.88.188:9001 s3 cp  s3://mybucket2/{} t2"
+```
+
